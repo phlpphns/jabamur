@@ -1,6 +1,13 @@
 # jabamur
 JSON based multi peak refinement
 
+Improvement of project structure from scripts to installable module is in progress.
+
+Was developed for data treatment in:
+
+An In Situ Synchrotron X-Ray Diffraction Study on the Influence of Hydrogen on the Crystallization of Ge-Rich Ge2Sb2Te5 (Philipp Hans, Cristian Mocuta, Marie-Ingrid Richard, Daniel Benoit, Philippe Boivin, Yannick Le-Friec, Roberto Simola, Olivier Thomas) - https://onlinelibrary.wiley.com/doi/10.1002/pssr.202100658
+
+
 The general project structure that I decided to use is the following:
 
 projects_fitting		
