@@ -4,13 +4,15 @@ JSON based multi peak refinement
 ==========
 TODOs:
 
-numerate scripts!
-
 Improvement of project structure from scripts to installable module is in progress.
 
 Add full working example.
 
 First big error was that project has not immediately been set up as installable module.
+
+A part of the scripts were prepared having in mind that the files would stem from a synchrotron experiment and are coming from an integration procedure. This is nice but perhaps too detailed and too much constrained.
+
+How to proceed? Find the new starting point: having the project folders created and the files inside these folders
 
 In principle one would only need to define the input and output files for the fitting procedure to run. Most of the macros contain procedures for data preparation.
 
@@ -25,19 +27,32 @@ An In Situ Synchrotron X-Ray Diffraction Study on the Influence of Hydrogen on t
 
 The general project structure that I decided to use is the following:
 
-projects_fitting		
+projects_fitting	
+	
 	*.project
+	
 		data_for_analysis
+		
 			files.npy
+			
 			files.bckg.npy
+			
 		results
-			files.fitresS
+		
+			files.fitres
+			
 			files.png
+			
 			files.x_y_bckg.npy
+			
 		list_of_files
+		
 		*.beads_parameters
+		
 		*.json
+		
 		*.refine
+		
 
 In principle the most important files are list_of_files and *.refine.
 → “list_of_files” is a ascii file with two columns that contains the paths to the datasets that should be refined and the locations where results should be saved
@@ -51,8 +66,11 @@ In principle the most important files are list_of_files and *.refine.
     ],
     "rough_peak_positions" : {
         "GST_cub_111": {"peak_model": "VoigtModel", "range_left": 1.79, "range_right": 1.821, "area_max" : "auto", "area_min": 0.0, "fhwm_max": 0.15, "fhwm_min": 0.0},
+
         "Ge_111":      {"peak_model": "VoigtModel", "range_left": 1.91, "range_right": 1.93, "area_max" : "auto", "area_min": 0.0, "fhwm_max": 0.15, "fhwm_min": 0.0},
+
         "GST_trig":    {"peak_model": "VoigtModel", "range_left": 2.048, "range_right": 2.07, "area_max" : "auto", "area_min": 0.0, "fhwm_max": 0.15, "fhwm_min": 0.0},
+
         "GST_cub_200": {"peak_model": "VoigtModel", "range_left": 2.07, "range_right": 2.09, "area_max" : "auto", "area_min": 0.0, "fhwm_max": 0.15, "fhwm_min": 0.0}
     },
     "overwrite": false,
@@ -91,35 +109,35 @@ pip install joblib
 
 pip install dill
 
-script_create_config_files_as_json .py
+script_01_create_config_files_as_json .py
 
 mv projects_fitting_/ projects_fitting
 
 cd projects_fitting/
 
-script_setup_projects_from_jsons.py
+script_02_setup_projects_from_jsons.py
 
 cd ..
 
-script_create_project-to-refine_json_from_project_folders .py
+script_03_create_project-to-refine_json_from_project_folders .py
 
 ==========================================================
 ### can be run multiple times
 
-script_provide_files_structured_according_to_config_file.py
+script_04_provide_files_structured_according_to_config_file.py
 
-script_estimate_beads_from_config.py
+script_05_estimate_beads_from_config.py
 
 ###example for selection of files.py
 
-script_provide_list_of_files_that_should_be_refined.py --first 250 --spacing 10
+script_06_provide_list_of_files_that_should_be_refined.py --first 250 --spacing 10
 
-script_create_and_save_beads_for_list_of_files.py
+script_07_create_and_save_beads_for_list_of_files.py
 
-script_multi_peak_fitting.py --parallel yes --number_of_processes 8 --debug no
+script_08_multi_peak_fitting.py --parallel yes --number_of_processes 8 --debug no
 
 
-script_load_and_process_lmfit_results.py --do_extraction yes
+script_09_load_and_process_lmfit_results.py --do_extraction yes
 
 =========================================================================
 
@@ -132,9 +150,13 @@ In what follows the above steps and also all CONVENTIONS will be explained: To p
     • The integrated files are initially saved as tth, I(tth) ascii dat files and have a format similar to “epoch1626665631.38_pos-5.50_scan_40670.dat”.
 
     • For each conducted experiment exist a couple of config files:
+    
         ◦ json: defines e.g. energy and bounds per experiment; data locations; working folder; temperature log files; a unique descriptor
+        
         ◦ beads_parameters: this enables one to determine a background if no suited background was measured or is nevertheless necessary
+        
         ◦ refine: defines all peaks that should be fitted and the kind of algorithm
+        
 
     • 0 - The procedure (after having created and activated the python environment) will start from a csv-file of the following format:
 

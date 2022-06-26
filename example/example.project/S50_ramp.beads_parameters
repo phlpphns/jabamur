@@ -1,0 +1,11 @@
+{
+    "descriptor": "S50_ramp",
+    "beads_parameters": {
+        "freq_cutoff": 0.025,
+        "lam_0": 0.0435,
+        "lam_1": 0.15,
+        "lam_2": 0.2,
+        "asymmetry": 25.0
+    },
+    "beads_comment": ""
+}

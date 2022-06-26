@@ -1,0 +1,48 @@
+{
+    "descriptor": "S50_ramp",
+    "range_of_interest": [
+        1.69,
+        2.25
+    ],
+    "rough_peak_positions": {
+        "GST_cub_111": {
+            "peak_model": "VoigtModel",
+            "range_left": 1.79,
+            "range_right": 1.821,
+            "area_max": "auto",
+            "area_min": 0.0,
+            "fhwm_max": 0.15,
+            "fhwm_min": 0.0
+        },
+        "Ge_111": {
+            "peak_model": "VoigtModel",
+            "range_left": 1.91,
+            "range_right": 1.93,
+            "area_max": "auto",
+            "area_min": 0.0,
+            "fhwm_max": 0.15,
+            "fhwm_min": 0.0
+        },
+        "GST_trig": {
+            "peak_model": "VoigtModel",
+            "range_left": 2.048,
+            "range_right": 2.07,
+            "area_max": "auto",
+            "area_min": 0.0,
+            "fhwm_max": 0.15,
+            "fhwm_min": 0.0
+        },
+        "GST_cub_200": {
+            "peak_model": "VoigtModel",
+            "range_left": 2.07,
+            "range_right": 2.09,
+            "area_max": "auto",
+            "area_min": 0.0,
+            "fhwm_max": 0.15,
+            "fhwm_min": 0.0
+        }
+    },
+    "overwrite": false,
+    "method_for_fit": "differential_evolution",
+    "iterations_max": 70000
+}

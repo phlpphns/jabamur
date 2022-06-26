@@ -1,0 +1,18 @@
+{
+    "energy": 17.93,
+    "sample": "S50",
+    "descriptor": "S50_ramp",
+    "type_of_measurement": "ramp",
+    "temperature_program": "10 dg/min ->  180; then 2dg/m -> 450; 10 dg/M for cooling",
+    "folder_root_integrated": "./integrated",
+    "aquisition_time_in_s": 5.0,
+    "segments_per_pattern": 3,
+    "scan_first": 37,
+    "scan_last": 1707,
+    "copy_segments": [
+        1
+    ],
+    "folder_work_root": "./data_for_analysis",
+    "dir_temperature_log": "./temperature_logs",
+    "temperature_log": "log_37.log"
+}
