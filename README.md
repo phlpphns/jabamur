@@ -58,6 +58,7 @@ In principle the most important files are list_of_files and *.refine.
 → “list_of_files” is a ascii file with two columns that contains the paths to the datasets that should be refined and the locations where results should be saved
 → “*.refine” contains the refinement instructions. It is a file in json format with contents (example):
 
+
 {
     "descriptor": "dummy_descriptor",
     "range_of_interest": [
@@ -76,7 +77,9 @@ In principle the most important files are list_of_files and *.refine.
     "overwrite": false,
     "method_for_fit": "differential_evolution",
     "iterations_max": 70000
+
 }
+
  
 The project structure described above is created by the scripts that are provided in the folder “scripts_peakfitting”. They will work for the soleil 2021 july project, where a folder with all integrated files in exemplary format “epoch1626665631.38_pos-5.50_scan_40670.dat” is given (because my scripts filter the files according to the number at the end to copy them an npy-binary format to the project folder).
 
