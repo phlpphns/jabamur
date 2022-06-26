@@ -6,7 +6,7 @@ TODOs:
 
 Improvement of project structure from scripts to installable module is in progress.
 
-Add full working example.
+Add full working example (search non confidental data).
 
 First big error was that project has not immediately been set up as installable module.
 
@@ -17,6 +17,8 @@ How to proceed? Find the new starting point: having the project folders created 
 In principle one would only need to define the input and output files for the fitting procedure to run. Most of the macros contain procedures for data preparation.
 
 I see that it is hard to follow. Need to refactor and make the flow more organized!
+
+On the long run, such projects might more easily be organized with a GUI and single project/archive files instead of folders and/or results/data stored in json files.
 
 ==========
 
