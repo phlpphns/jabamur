@@ -71,22 +71,34 @@ Below, a routine how to set up a complete refinement (incl creating a suited pyt
 ### theoretically needs to be run only once
 
 conda create -n py38 python=3.8
+
 conda activate py38
 
+
 pip install numpy
+
 pip install matplotlib
+
 pip install lmfit
+
 pip install pybaselines
+
 pip install simple_parsing
+
 pip install pandas
+
 pip install joblib
+
 pip install dill
 
 script_create_config_files_as_json .py
 
 mv projects_fitting_/ projects_fitting
+
 cd projects_fitting/
+
 script_setup_projects_from_jsons.py
+
 cd ..
 
 script_create_project-to-refine_json_from_project_folders .py
@@ -95,15 +107,22 @@ script_create_project-to-refine_json_from_project_folders .py
 ### can be run multiple times
 
 script_provide_files_structured_according_to_config_file.py
+
 script_estimate_beads_from_config.py
+
 ###example for selection of files.py
+
 script_provide_list_of_files_that_should_be_refined.py --first 250 --spacing 10
+
 script_create_and_save_beads_for_list_of_files.py
 
 script_multi_peak_fitting.py --parallel yes --number_of_processes 8 --debug no
 
+
 script_load_and_process_lmfit_results.py --do_extraction yes
+
 =========================================================================
+
 Working on linux, I decided to place all scripts in a central folder and to add that folder to the PATH variable by the commands export PATH="$HOME/SCRIPTS/scripts_peakfitting/:$PATH" or source add_scripts_to_PATH.sh
 (The PATH variable is an environment variable that contains an ordered list of paths that Linux will search for executables when running a command. - It might be possible to set up something similar for windows systems as well). By working with the PATH variable, my procedures would be available in every folder irrespective of the relative location to the script folder (-> means that different projects could be analyzed that way more easily).
 For the moment, the scripts are designed to accomplish single peak fits on one range of 1D diffraction data that are specially arranged according to some conventions. Therefore, config-files are used.
