@@ -3,6 +3,9 @@ JSON based multi peak refinement
 
 ==========
 TODOs:
+
+numerate scripts!
+
 Improvement of project structure from scripts to installable module is in progress.
 
 Add full working example.
