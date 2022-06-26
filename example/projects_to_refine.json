@@ -1,0 +1,41 @@
+{
+    "_general_comment": "refinement will be started only if value is set to 'refine' ",
+    "projects_to_refine": [
+
+    ],
+    "not_refined": [
+    	"projects_fitting/S5_ramp.project",
+	"projects_fitting/S10_iso_TxGST_392_deg.project",
+	"projects_fitting/S10_iso_Txm5GST_387_deg.project",
+	"projects_fitting/S10_iso_Txm10GST_382_deg.project",
+	"projects_fitting/S10_iso_Txp5GST_397_deg.project",
+	"projects_fitting/S10_iso_Txp10GST_402_deg.project",
+	"projects_fitting/S10_ramp.project",
+	"projects_fitting/S25_iso_TxGST_394_deg.project",
+	"projects_fitting/S25_iso_Txm5GST_389_deg.project",
+	"projects_fitting/S25_iso_Txm10GST_384_deg.project",
+	"projects_fitting/S25_iso_Txp5GST_399_deg.project",
+	"projects_fitting/S25_iso_Txp10GST_ 404_deg.project",
+	"projects_fitting/S25_ramp.project",
+	"projects_fitting/S50_iso_TxGST_400_deg.project",
+	"projects_fitting/S50_iso_Txm5GST_395_deg_part1.project",
+	"projects_fitting/S50_iso_Txm5GST_395_deg_part2.project",
+	"projects_fitting/S50_iso_Txm10GST_390_deg.project",
+	"projects_fitting/S50_iso_Txm15GST_385_deg.project",
+	"projects_fitting/S50_iso_Txm25GST_375_deg.project",
+	"projects_fitting/S50_iso_Txm35GST_365_deg.project",
+	"projects_fitting/S50_iso_Txp5GST_405_deg.project",
+	"projects_fitting/S50_iso_Txp10GST_410_deg.project",
+	"projects_fitting/S50_ramp.project",
+	"projects_fitting/S447_iso_TxGST_374_deg.project",
+	"projects_fitting/S447_iso_Txm5GST_369_deg.project",
+	"projects_fitting/S447_iso_Txm10GST_364_deg.project",
+	"projects_fitting/S447_iso_Txm15GST_359_deg.project",
+	"projects_fitting/S447_iso_Txm25GST_349_deg.project",
+	"projects_fitting/S447_iso_Txp5GST_379_deg.project",
+	"projects_fitting/S447_iso_Txp10GST_384_deg.project",
+	"projects_fitting/S447_ramp.project",
+	"projects_fitting/LP3_mapping_at_RT_1.project",
+        "projects_fitting/LP3_mapping_at_RT_2.project"
+    ]
+}

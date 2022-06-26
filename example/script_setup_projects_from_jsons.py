@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 
 import glob
@@ -7,6 +8,7 @@ import shutil
 
 #CONFIG_FILE_FOLDER = './config_files/'
 CONFIG_FILE_FOLDER = './'
+### TODO: hard code template_refine.refine
 COPY_FROM = "../template_refine.refine"
 
 config_files = [config_file for config_file in glob.glob(
